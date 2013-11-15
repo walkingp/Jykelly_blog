@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>{{ page.title }} - just do IT</title>
+   <meta name="author" content="{{ site.author.name }}" />
+   <!-- 添加网址logo icon-->
+   <link rel="Shortcut Icon" href="{{ root_url }}/assets/images/favicon.ico">
+   <link rel="start" href="{{ HOME_PATH }}" />
+
+	{% if page.keywords %}
+	<meta name="keywords" content="{{ page.keywords }}">
+	{% endif %}
+	
+	{% if site.author.feedburner %}
+  	<link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/{{ site.author.feedburner }}" title="RSS feed" />
+	{% endif %}
+	{% if page.feed %}
+  	<link rel="alternate" type="application/atom+xml" href="{{ page.feed }}" title="RSS feed" />
+	{% endif %}
+
+    <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="{{ ASSET_PATH }}/css/syntax.min.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="{{ ASSET_PATH }}/css/screen.min.css" type="text/css" />
+   <!-- Homepage_post css,called page.css-->
+   <link rel="stylesheet" href="{{ ASSET_PATH }}/css/page.min.css" type="text/css" >
+   <!--添加搜索样式-->
+   <link rel="stylesheet" href="http://walkingp.com/assets/css/jquery-ui.css" type="text/css" />
+   <!--使得适应-->
+   <style type="text/css">
+      .ui-menu-item{list-style-type: none;}.ui-menu-item a, #search {color: #21759b;}.ui-menu-item a:hover{color: #2b9b0c;cursor:pointer;}#search:focus {border-color: #66afe9;outline: 0;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);}.ui-corner-all{-moz-border-radius: 0;-webkit-border-radius: 0;Unknown property name.-khtml-border-radius: 0;border-radius: 0;}
+   </style>
+
+</head>
+<body id="{{ page.section }}">
+<div id="site">
+  
+  <div id="header">
+    <h1>
+    	<a href="{{ HOME_PATH }}" title="{{ site.author.name }}">{{ site.author.name }}</a>	 
+    </h1>
+    <p>{{ site.title }}</p>
+    <ul class="nav">
+      <li><a class="home" href="{{ HOME_PATH }}">首页</a></li>
+      <!--<li><a href="/tags.html">标签</a></li>-->
+      <li><a href="/album/" target="_blank">相册</a></li>
+      <li><a href="/archive.html">存档</a></li>
+      <li><a href="/pages.html">页面</a></li>
+      <!--<li><a href="/categories.html">分类</a></li>-->
+	  <li><a href="/about.html">关于</a></li>
+      <li><input type="text"  id="search" size="20" placeholder="Search the Posts" results="0"></li>
+    </ul>
+  </div>
+
+  {{ content }}
+  
+  <div id="footer">
+  	<address>
+  		<span class="copyright">
+  			Content by <a href="http://walkingp.com">walkingp</a>. Design by 
+  			<a href="http://pigerla.com">Spy</a>
+  			<br/>		
+  		</span>
+  		<span class="engine">
+  			Powered by <a href="http://github.com/mojombo/jekyll/" title="A static, minimalist CMS">Jekyll</a>
+  		</span>
+  	</address>
+  </div>
+  
+</div>
+
+<!--[if IE 6]>
+<script type="text/javascript"> 
+	/*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+	var IE6UPDATE_OPTIONS = {
+		icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+	}
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+  <!--引入搜索js-->
+  <script type="text/javascript" src="http://walkingp.com/assets/js/jquery.js"></script>
+  <script type="text/javascript" src="http://walkingp.com/assets/js/jquery-ui.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $.ajax({
+          url: "http://walkingp.com/search.xml",
+          dataType: "xml",
+          success: function( xmlResponse ) {
+             var data = $( "article", xmlResponse ).map(function() {
+                  return {
+                      value: $( "title", this ).text() + "【" +
+                          ( $.trim( $( "date", this ).text() )+"】" ),
+                      desc: $("description", this).text(),
+                      url: $("url", this).text()
+                  };
+              }).get();
+
+              $( "#search" ).autocomplete({
+                  source: data,
+                  minLength: 0,
+                  select: function( event, ui ) {
+                    window.location.href = ui.item.url;
+                  }
+              });
+          }
+      });
+  });
+  </script>
+  {% include JB/analytics %}
+</body>
+</html>
