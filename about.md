@@ -10,17 +10,21 @@ image:
   credit: Texture Lovers
   creditlink: http://texturelovers.com
 ---
+<h2>关于walkingp</h2>
 
-Jekyll is pretty rad and figured releasing a cleaned up version of [my site](http://mademistakes.com)[^1] as a theme for others to hack and build on would be fun. So here be that theme --- I call it **Minimal Mistakes**, a responsive Jekyll theme with large featured images and solid typography. 
+<img src="http://walkingp.com/assets/images/walkingp.jpg" alt="" />
 
-## Minimal Mistakes is all about:
+<p>坐标上海，一个很菜的C#软件工程师，略懂Java、Python，写过<a href="http://www.walkingp.com/cnblogs/" target="_blank">Android程序</a>。<p/><p>写代码只是副业，主业是玩，爱好很杂，电影、音乐、读书、旅行，跑步、骑行、游泳。</p>
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers. 
-* Minimal embellishments. Content first --- other widget nonsense never.
-* Large feature images for posts and pages.
-* Simple and clear permalink structure *(ie: domain.com/category/post-title)*
+<p>目前正热衷于跑马拉松和学习日语。</p>
 
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
+<ul>
+	<li>2013年9月8日 	烟台马拉松 半程 时间：1h34m50s</li>
+	<li>2013年9月28日 	太原马拉松 半程 时间：1h33m34s</li>
+	<li>2013年11月3日	杭州马拉松 全程 时间：3h50m43s</li>
+	<li>2013年11月17日	南通马拉松 半程 时间：1h34m40s</li>
+	<li>2013年12月1日	上海马拉松	全程 （暂未开始）</li>
+</ul>
 
-[^1]: Since open sourcing this theme I have released a couple other Jekyll themes. My website [Made Mistakes](http://mademistakes.com) is currently using a modified version of my [So Simple Theme](http://mmistakes.github.io/so-simple-theme/).
+<p>最大梦想是和那个她牵手环游地球，近期想去的地方是川西和甘南，到哈尔滨滑雪，攀登四姑娘山。</p>
+
