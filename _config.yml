@@ -1,6 +1,6 @@
-title:            Site Title
+title:            walkingp's blog
 tagline:          A short tagline
-description:      Describe your website.
+description:      just do IT.
 #Comment out url when working locally to resolve base urls correctly
 url:              http://walkingp.com
 
@@ -15,10 +15,10 @@ owner:
   facebook:       
   github:         
   linkedin:       
-  instagram:      
+  instagram:      walkingp
   lastfm:         
   tumblr:         
-  #weibo:	
+  #weibo:		wa	
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    
 
@@ -31,18 +31,18 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: About
-    url: /about
   - title: Articles
     url: /articles
   - title: Album
     url: /album
+  - title: About
+    url: /about
   #- title: Made Mistakes
   #  url: http://mademistakes.com
   #  external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Asia/Shanghai
 future:      true
 pygments:    true
 markdown:    kramdown

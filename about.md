@@ -12,7 +12,7 @@ image:
 ---
 <h2>关于walkingp</h2>
 
-<img src="http://walkingp.com/assets/images/walkingp.jpg" alt="" />
+<p><img src="http://walkingp.com/assets/images/walkingp.jpg" alt="" /></p>
 
 <p>坐标上海，一个很菜的C#软件工程师，略懂Java、Python，写过<a href="http://www.walkingp.com/cnblogs/" target="_blank">Android程序</a>。<p/><p>写代码只是副业，主业是玩，爱好很杂，电影、音乐、读书、旅行，跑步、骑行、游泳。</p>
 
