@@ -37,6 +37,22 @@
         <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}" itemprop="dateModified">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %} by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="{{ site.url }}/about" title="About {{ site.owner.name }}" itemprop="url">{{ site.owner.name }}</a></span></span>.</p>
       </footer>
     </div><!-- /.article-wrap -->
+<!--使用“多说评论系统”-->
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-thread-key="{{ post.title }}" data-title="{{ post.title }}" data-author-key="{{ page.title }}"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"walkingp"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- Duoshuo Comment END -->
+	
   </article>
 </div><!-- /#main -->
 
