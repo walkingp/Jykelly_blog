@@ -1,0 +1,53 @@
+﻿body{ color:#666; font-family:Verdana Arial Georgia;}
+a.current{ font-weight:normal;}
+::selection {background-color: #690;color: white;}
+::-moz-selection { background:#690; color:white; } 
+::-webkit-selection { background:#690; color:white;}
+.wrapper,.header,.footer{ width:960px; margin:0 auto;}
+.header{ height:80px;}
+.header .logo{ width:200px;background:url(/cnblogs/images/logo.png) no-repeat; height:60px; margin-top:7px;}
+.header .logo span{ display:none;}
+.header .right{ width:700px; padding-top:20px;}
+.container{ height:400px; background:#5DB7F2;}
+.intent{ padding-left:10px;}
+.list li{ background:url(/cnblogs/images/accept.png) no-repeat left center; padding-left:20px;}
+.list li.no{ background:none;}
+a.download{
+color: #fff;
+text-shadow: gray 0px 1px 0px;
+text-indent: 0;
+text-transform: uppercase;
+display: inline-block;
+padding: 0 1.2em;
+line-height: 2.5em;
+background: #6DBB4B;
+background: -webkit-gradient(linear, left top, left bottom, from(#77C556), to(#62B13E));
+background: -moz-linear-gradient(top, #77C556, #62B13E);
+border:solid 1px #589E13;
+border-radius: 3em;
+-moz-border-radius: 3em;
+-webkit-border-radius: 3em;
+font-weight:bold;
+box-shadow: 0px 0px 3px #52AAE3;
+-moz-box-shadow: 0px 0px 3px #52AAE3;
+-webkit-box-shadow: 0px 0px 3px #52AAE3;}
+a.download:hover{background: #67B746;
+text-decoration:none;
+color:#fff;
+background: -webkit-gradient(linear, left top, left bottom, from(#7CC95A), to(#6AB946));
+background: -moz-linear-gradient(top, #7CC95A, #6AB946);}
+.relative{ position:relative;}
+.absolute{ position:absolute;}
+.qr_img{ right:-20px; bottom:10px;}
+.intro dl{ background:url(/cnblogs/images/cnblogs.png) no-repeat; width:650px; padding-top:120px;}
+.intro dl dt{ float:left; width:215px;}
+.intro dl dt h2{ font-weight:bold; font-size:14px; padding:5px 0;}
+.intro dl dt p{ line-height:1.6em; font-size:12px;}
+p{ line-height:1.6em;}
+a.download2{ background:#1FA8E4; padding:6px 16px; color:#fff; font-size:12px; font-weight:bold;}
+a.download2:hover{ background:#2CB2F0; text-decoration:none;color:#fff;}
+.phone_zone{ background:url(/cnblogs/images/phone.png) no-repeat; height:371px; padding-top:61px; padding-left:25px; width:186px; padding-right:20px; overflow:hidden; top:10px; left:-10px;}
+.phone_zone_box{ width:187px; overflow:hidden; height:307px;}
+.phone_zone_container{ width:2000px;}
+.phone_zone_container img{ width:187px; height:307px;}
+.ie6_tips{ background:#ffe; border:solid 1px #eee;}
