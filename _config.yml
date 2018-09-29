@@ -33,6 +33,8 @@ bing_verify:
 links:
   - title: Articles
     url: /articles
+  - title: Triathlon
+    url: /triathlon
   - title: Album
     url: /album
   - title: About
