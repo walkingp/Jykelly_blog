@@ -1,10 +1,10 @@
 ---
 layout: page
-permalink: /about/index.html
-title: About
+permalink: /triathlon/index.html
+title: Triathlon
 tagline: walkingp
-tags: [about, walkingp, author]
-modified: 9-9-2013
+tags: [about, walkingp, author,triathlon]
+modified: 9-29-2018
 image:
   feature: banner.jpg
 ---
