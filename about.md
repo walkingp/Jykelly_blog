@@ -10,8 +10,6 @@ image:
 ---
 <h2>关于walkingp</h2>
 
-<p><img src="http://walkingp.com/assets/images/walkingp.jpg" alt="" /></p>
-<br />
 
 
 #### 职业
