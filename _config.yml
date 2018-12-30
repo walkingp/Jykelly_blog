@@ -2,13 +2,13 @@ title:            walkingp's blog
 tagline:          A short tagline
 description:      just do IT.
 #Comment out url when working locally to resolve base urls correctly
-url:              http://walkingp.github.io
+url:              http://walkingp.com
 
 # Owner/author information
 owner:
-  name:           walkingp
+  name:           米高
   avatar:         bio-photo.jpg
-  bio:            "Programmer,Runner..."
+  bio:            "Programmer..."
   email:          walkingp@126.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter:        walkingp
@@ -18,7 +18,7 @@ owner:
   instagram:      walkingp
   lastfm:         
   tumblr:         
-  #weibo:		wa	
+  #weibo:		Michael治大国	
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    
 
