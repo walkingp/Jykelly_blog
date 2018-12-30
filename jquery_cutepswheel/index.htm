@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv="Content-Language" content="zh-CN" />
+ <meta name="Keywords" content="" />
+ <meta name="Description" content="" />
+ <link type="text/css" rel="stylesheet" href="css/layout.css" />
+ <script type="text/javascript" src="js/jquery_min.js"></script>
+ <script type="text/javascript" src="js/jquery.pswheel.js"></script>
+ <script type="text/javascript">
+$(function(){
+	$('#txt').pswheel();
+});
+ </script>
+ <title>jQuery.CutePsWheel插件</title>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<h1><a href="/" title="jQuery文本框滚动值插件"><span>jQuery.CutePsWheel</span></a></h1>
+		<h2>像Photoshop一样用滚轮自由改变文本框值的jQuery插件<h2>
+	</div>
+	<div class="navigator">
+		<a class="bold" href="index.htm" title="">首页</a>
+		<a href="download.htm" title="">下载</a>
+		<a href="demo.htm" title="">演示</a>
+		<a href="http://walkingp.com/?page_id=2" title="">更多</a>
+	</div>
+	<div id="body">
+		<div class="content" id="panel0">
+			<h2 class="bold font14">jQuery文本框滚动值插件</h2>
+			<p class="title">一、功能及简介<p>
+			<ul>
+				<li>可定义滚轮每滚动一次值改变的间隔；</li>
+				<li>可定义文本框的最大滚动值和最小滚动值；</li>
+				<li>可双击复原文本框初始值；</li>
+				<li>支持小数类型；</li>
+				<li>体积小，仅115行代码。</li>
+			</ul>
+			<p>jQuery CutePsWheel是一款jQuery鼠标滚轮增强插件，用于控制文本框的输入，可使其值随鼠标滚动的上下改变而改变。</p>
+			<p class="title">二、下载并使用</p>
+			<p>1、<a href="" title="">下载</a> jQuery.CutePsWheel插件，并引入到页面中；</p>
+			<p>2、使用以下代码为目标文本框注册事件：<p>
+			<pre class="code mtb10 p10">
+$('<span class="pink">#txt</span>').<span class="blue">pswheel</span>({ 
+  <span class="blue">interval</span>: 10,<span class="green">//每次滚动间隔（可选，默认为1）</span>
+  <span class="blue">min</span>:0,<span class="green">//最小值（可选，默认不限制）</span>
+  <span class="blue">max</span>:1000<span class="green">//最大值（可选，可选，默认不限制）</span>
+});</pre>
+			<p class="title">三、演示效果</p>
+			<p><input type="text" id="txt" class="text" value="8" /></p>
+			<p class="gray">(此模式为最简单模式，默认上下滚动滚轮一次改变的值间隔为1；使用更多参数支持自定义间隔值、最小值和最大值；详细请查看演示或者下载源码查看。)</p>
+			<p class="mt20"><a href="demo.htm" class="btn"><span>查看更多演示</span></a><p>
+		</div>
+	</div>
+	<div class="footer">
+		&copy; 2012 <a href="http://walkingp.com/" title="主页">walkingp.com</a> All rights reserved.
+	</div>
+</div>
+</body>
+</html>
+

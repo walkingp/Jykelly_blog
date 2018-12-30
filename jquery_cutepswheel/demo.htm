@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv="Content-Language" content="zh-CN" />
+ <meta name="Keywords" content="" />
+ <meta name="Description" content="" />
+ <link type="text/css" rel="stylesheet" href="css/layout.css" />
+ <script type="text/javascript" src="js/jquery_min.js"></script>
+ <script type="text/javascript" src="js/jquery.pswheel.js"></script>
+ <script type="text/javascript">
+$(function(){
+	$('#txt1').pswheel();
+	$('#txt2').pswheel({interval:10});
+	$('#txt3').pswheel({interval:10,min:0,max:100});
+	$('#txt4').pswheel({interval:0.1});
+});
+ </script>
+ <title>演示 - jQuery.CutePsWheel插件</title>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<h1><a href="/" title="jQuery文本框滚动值插件"><span>jQuery.CutePsWheel</span></a></h1>
+		<h2>像Photoshop一样用滚轮自由改变文本框值的jQuery插件<h2>
+	</div>
+	<div class="navigator">
+		<a href="index.htm" title="">首页</a>
+		<a href="download.htm" title="">下载</a>
+		<a class="bold" href="demo.htm" title="">演示</a>
+		<a href="http://walkingp.com/?page_id=2" title="">更多</a>
+	</div>
+	<div class="content" id="panel0">
+		<fieldset class="shadow">
+			<legend class="bold font14">演示</legend>
+			<p class="title">一、简易调用方式：</p>
+			<p>以最简单的方式调用CutePsWheel插件，无需加任何参数，默认滚动值间隔为1。</p>
+			<p><input type="text" id="txt1" value="0" /></p>
+			<p>代码如下：</p>
+			<p class="bb pb20"><span class="gray code">$('<span class="pink">#txt1</span>').<span class="blue">pswheel</span>();</span></p>
+			<p class="title">二、设置滚动间隔：</p>
+			<p>设置滚动值间隔interval，则每次上次滚动鼠标滚轮则以此间隔值来改变值。</p>
+			<p><input type="text" id="txt2" value="30" /></p>
+			<p>代码如下：</p>
+			<p class="bb pb20"><span class="gray code">$('<span class="pink">#txt2</span>').<span class="blue">pswheel</span>({interval:10});</span></p>
+			<p class="title">三、设置最大值与最小值：</p>
+			<p><input type="text" id="txt3" value="50" /></p>
+			<p>代码如下：</p>
+			<p class="bb pb20"><span class="gray code">$('<span class="pink">#txt3</span>').<span class="blue">pswheel</span>({interval:10,min:0,max:100});</span></p>
+			<p class="title">四、支持小数：</p>
+			<p><input type="text" id="txt4" value="0.3" /></p>
+			<p>代码如下：</p>
+			<p class="pb20"><span class="gray code">$('<span class="pink">#txt4</span>').<span class="blue">pswheel</span>({interval:0.1});</span></p>
+		</fieldset>
+	</div>
+	<div class="footer">
+		&copy; 2012 <a href="http://walkingp.com/" title="主页">walkingp.com</a> All rights reserved.
+	</div>
+</div>
+</body>
+</html>
+
