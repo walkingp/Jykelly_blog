@@ -22,7 +22,7 @@ $(function(){
 	while(i<data.length){
 		var title=data[i]['FileName'];
 		var desc=data[i]['ExitInfo']['Description'] ? data[i]['FileName'] : '未命名';
-		$('<a title="' + desc + '" id="_pic' + i + '"/>').append($('<img>').attr('src',thumbPath + title)).attr({'href':path + title,'title':desc}).appendTo($('#gallery'));
+		$('<a title="' + desc + '" id="_pic' + i + '"/>').append($('<img>').attr('data-src',thumbPath + title)).attr({'href':path + title,'title':desc}).appendTo($('#gallery'));
 		++i;
 	}
 	$('#gallery').find('a').each(function(i){
