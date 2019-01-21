@@ -51,4 +51,7 @@ $(function(){
 	if(hash){
 		$(hash).click();
 	}
+	var myLazyLoad = new LazyLoad({
+		elements_selector: ".lazy"
+	    });
 });
