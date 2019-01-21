@@ -100,14 +100,14 @@
 			if(location.hash == '#_pic' + i){
 				infowindow.open(map, m); //默认打开信息窗口。
 			}
-			google.maps.event.addListener(m, 'click', function () { 
+			/*google.maps.event.addListener(m, 'click', function () { 
 				for(var i=0,len=winArr.length;i<len;i++){
 					
 					winArr[i].close();
 				}
 				
 				curWin.open(map, m); 
-			});		
+			});*/		
 		}
 		//google.maps.event.addDomListener(window, 'load', initialize);
         $(function () {
