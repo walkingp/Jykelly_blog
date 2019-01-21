@@ -33,21 +33,21 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../album/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
 	<script type="text/javascript" src="../album/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-    <script type="text/javascript" src="http://ditu.google.cn/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=73f612b09deeba22de17c0c7dfdebb67"></script> 
 	<script src="../album/js/data.js"></script>
     <script type="text/javascript">
         var geocoder;
         var map;
-		var documentTitle=document.title;
+	var documentTitle=document.title;
         function initialize() {
-            geocoder = new google.maps.Geocoder();
+            //geocoder = new google.maps.Geocoder();
             var myOptions = {
-                center: new google.maps.LatLng(35.651, 104.064),
+                center: [35.651, 104.064],
                 zoom: 5, //缩放比例
-                mapTypeId: google.maps.MapTypeId.ROADMAP //地图类型 ?MapTypeId.ROADMAP ?MapTypeId.SATELLITE ?MapTypeId.HYBRID ?MapTypeId.TERRAIN 
-
+                //mapTypeId: google.maps.MapTypeId.ROADMAP //地图类型 ?MapTypeId.ROADMAP ?MapTypeId.SATELLITE ?MapTypeId.HYBRID ?MapTypeId.TERRAIN 
+		viewMode:'3D'
             }
-            map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+            map = new AMap.Map("map_canvas", myOptions);
 
 			var html='';
             for (var i = 0, len = data.length; i < len; i++) {
@@ -55,15 +55,15 @@
 
                 var lat = data[i]['ExitInfo']['Location']['Latitude'];
                 var longLat = data[i]['ExitInfo']['Location']['Longtitude'];
-                var location=new google.maps.LatLng(lat, longLat);
+                var location=new AMap.LngLat(lat, longLat);
                 var title = data[i]['ExitInfo']['Description'] ? data[i]['ExitInfo']['Description'] : '未命名';
 				var thumb='../album/photos/s/' + data[i]['FileName'];
 				var photo='../album/photos/' + data[i]['FileName'];
-                var marker = new google.maps.Marker({
+                var marker = new AMap.Marker({
                     map: map,
                     position: location,
                     title: title,
-                    animation: google.maps.Animation.DROP //坐标动画效果
+                    //animation: google.maps.Animation.DROP //坐标动画效果
                 });
 				var s='<div style="font-size:11px;width:120px; text-align:center; height:100px;position:relative;"><p style="color:#000;">' + title + '</p><a onclick="$(\'#_pic' + i + '\').click();return false;" id="pic' + i + '" class="fancybox-effects-c" title="' + title + '" href="' + photo + '"><img src="' + thumb + '" /></a>' + 				
 				'</div>';
@@ -92,9 +92,8 @@
         }
 		var winArr=[];
 		function attachSecretMessage(m,s,i){
-			var infowindow = new google.maps.InfoWindow({
-				content: s,
-				pixelOffset: 0 //坐标偏移量，一般不用修改
+			var infowindow = new AMap.InfoWindow({
+				content: s
 			});
 			winArr.push(infowindow);
 			var curWin=winArr[i];
