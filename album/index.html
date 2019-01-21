@@ -32,6 +32,17 @@
 <script type="text/javascript" src="../album/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
+<script type="text/javascript">
+(function(w, d){
+    var b = d.getElementsByTagName('body')[0];
+    var s = d.createElement("script"); 
+    var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
+    s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+    s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+    w.lazyLoadOptions = {/* Your options here */};
+    b.appendChild(s);
+}(window, document));
+</script>
 </head>
 <body>
 <div class="navbar navbar-fixed-top navbar-inverse">
