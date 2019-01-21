@@ -32,7 +32,9 @@ bing_verify:
 # For external links add external: true
 links:
   - title: Articles
-    url: /articles
+    url: /articles    
+  - title: Triathlon
+    url: /triathlon
   - title: Album
     url: /album
   - title: About
