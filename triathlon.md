@@ -85,6 +85,7 @@ image:
 + 6.10		STC尚湖标铁   年龄组冠军
 + 9.9     玄铁崇明半程    速度组第3名
 + 9.16    STC滴水湖113   接力组冠军
++ 11.18   上海马拉松 2:55:13
 
 #### 赞助商
 + Scott
@@ -93,3 +94,4 @@ image:
 + Fusion 
 + ON Running
 + Compex
++ XTERRA
