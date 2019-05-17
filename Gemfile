@@ -5,3 +5,4 @@ gem 'jekyll-minibundle'
 gem 'coderay'
 gem 'rake'
 gems: [jekyll-paginate, jekyll-sitemap,jekyll-admin]
+gem "minimal-mistakes-jekyll"
